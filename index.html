@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Villano Growth — Presentaciones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/shared/css/base.css" />
+  <style>
+    body { background: #080E1C; }
+    .index-hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .index-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: #00C2B2;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .index-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+    .index-sub {
+      font-size: 16px;
+      color: #8CA0BC;
+      margin-bottom: 60px;
+      max-width: 420px;
+    }
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+    .brand-card {
+      background: #0F1829;
+      border: 0.5px solid #1C2B45;
+      border-radius: 16px;
+      padding: 32px 28px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color 0.3s, transform 0.3s;
+      text-align: left;
+    }
+    .brand-card:hover {
+      border-color: #00C2B2;
+      transform: translateY(-4px);
+    }
+    .brand-card .brand-tag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: #00C2B2;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border: 1px solid rgba(0,194,178,0.3);
+      border-radius: 100px;
+      background: rgba(0,194,178,0.06);
+      width: fit-content;
+    }
+    .brand-card .brand-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .brand-card .brand-desc {
+      font-size: 14px;
+      color: #8CA0BC;
+      line-height: 1.55;
+    }
+    .brand-card .brand-arrow {
+      margin-top: 8px;
+      font-size: 20px;
+      color: #00C2B2;
+      transition: transform 0.3s;
+    }
+    .brand-card:hover .brand-arrow { transform: translateX(6px); }
+    @media (max-width: 600px) {
+      .index-hero { padding: 80px 20px; }
+      .brands-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="dot-grid">
+
+  <div class="index-hero">
+    <p class="index-label">Villano Growth</p>
+    <h1 class="index-title">Presentaciones</h1>
+    <p class="index-sub">Propuestas comerciales para cada cliente. Selecciona una para ver.</p>
+
+    <div class="brands-grid">
+
+      <a href="/brands/ga-brokers/" class="brand-card">
+        <span class="brand-tag">Seguros de Vida · Miami</span>
+        <div class="brand-name">GA Brokers</div>
+        <p class="brand-desc">Sistema de Captación B2C para Seguros de Vida — Mercado Latino USA</p>
+        <span class="brand-arrow">→</span>
+      </a>
+
+      <!-- Futuras presentaciones: duplicar el bloque de arriba -->
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script>
+    gsap.from('.index-label', { opacity: 0, y: 16, duration: 0.6, delay: 0.1 });
+    gsap.from('.index-title', { opacity: 0, y: 30, duration: 0.7, delay: 0.2 });
+    gsap.from('.index-sub', { opacity: 0, y: 20, duration: 0.6, delay: 0.4 });
+    gsap.from('.brand-card', { opacity: 0, y: 30, duration: 0.6, stagger: 0.12, delay: 0.55, ease: 'power2.out' });
+  </script>
+</body>
+</html>
