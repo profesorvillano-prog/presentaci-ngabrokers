@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/brands/:brand", "destination": "/brands/:brand/index.html" },
-    { "source": "/brands/:brand/", "destination": "/brands/:brand/index.html" }
-  ]
-}
